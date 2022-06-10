@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chotiwut</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+        integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <style type="text/css">
+        .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .tg td {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            overflow: hidden;
+            width: 20px;
+            height: 20px;
+            ;
+            word-break: normal;
+        }
+
+        .tg th {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            overflow: hidden;
+            padding: 10px 5px;
+            word-break: normal;
+        }
+
+        .tg .tg-0pky {
+            border-color: inherit;
+            text-align: left;
+            vertical-align: top
+        }
+    </style>
+    <!-- <div id="navbar">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><img class="brand" src="./asset/logo.png" width="25%"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div> -->
+    <!-- <div class="main">
+        <div class="container py-5">
+            <section id="one" class="row">
+                <div class="col-md-8 col-sm-12 my-1 carousel">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./asset/r34.jpg" class="d-block w-100 slider" alt="...">
+                                <div class="carousel-caption d-none d-md-block px-3">
+                                    <h5>Nissan GTR R34</h5>
+                                    <p>The Nissan Skyline GT-R (Japanese: 日産・スカイラインGT-R, Nissan Sukairain GT-R) is a
+                                        sports car based on the Nissan Skyline range.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./asset/240z.jpg" class="d-block w-100 slider" alt="...">
+                                <div class="carousel-caption d-none d-md-block px-3">
+                                    <h5>Nissan Fairlady Z</h5>
+                                    <p>The Nissan S30 (sold in Japan as the Nissan Fairlady Z and in other markets as
+                                        the Datsun 240Z)</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./asset/s15.webp" class="d-block w-100 slider" alt="...">
+                                <div class="carousel-caption d-none d-md-block px-3">
+                                    <h5>Nissan Silvia S15</h5>
+                                    <p>The Nissan Silvia (Japanese: 日産・シルビア, Hepburn: Nissan Shirubia) is the series of
+                                        small sports cars built on the Nissan S platform.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 side my-1">
+                    <div class="px-3 py-4 d-flex justify-content-center">
+                        <p class="ms-auto detail">
+                            Nissan Motor Co., Ltd. is a Japanese multinational automobile manufacturer headquartered in
+                            Nishi-ku, Yokohama, Japan. The company sells its vehicles under the Nissan, Infiniti, and
+                            Datsun brands, with in-house performance tuning products labelled Nismo.
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-center px-3">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item mx-2" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                    aria-selected="true">GTR R34</button>
+                            </li>
+                            <li class="nav-item mx-2" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile" type="button" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false">Fairlady Z</button>
+                            </li>
+                            <li class="nav-item mx-2" role="presentation">
+                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-contact" type="button" role="tab"
+                                    aria-controls="pills-contact" aria-selected="false">Silvia S15</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content px-3" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="d-flex justify-content-center">
+                                <div class="col-lg-4">
+                                    <p>Production</p>
+                                    <p>Designer</p>
+                                    <p>Body Style</p>
+                                    <p>Layout</p>
+                                    <p>Engine</p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <p>1999 - 2002</p>
+                                    <a href="https://en.wikipedia.org/wiki/Kozo_Watanabe_(engineer)"
+                                        target="_blank">
+                                    <p>Kozo Watanabe</p>
+                                    </a>
+                                    <p>2-door coupé</p>
+                                    <p>Front engine, all-wheel drive</p>
+                                    <p>2.6 L twin-turbocharged RB26DETT I6 &
+                                        2.8 L twin-turbocharged RB28DETT I6 (Z-Tune)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <div class="d-flex justify-content-around">
+                                <div class="col-md-4">
+                                    <p>Production</p>
+                                    <p>Designer</p>
+                                    <p>Body Style</p>
+                                    <p>Layout</p>
+                                    <p>Engine</p>
+                                </div>
+                                <div class="col-md-8">
+                                    <p>1969 - 1978</p>
+                                    <p>Yoshihiko Matsuo</p>
+                                    <p>3-door coupé</p>
+                                    <p> Front-engine, rear-wheel-drive</p>
+                                    <p> 2.8 L L28E I6 &
+                                        2.8 L L28ET turbo I6</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                            aria-labelledby="pills-contact-tab">
+                            <div class="d-flex justify-content-around">
+                                <div class="col-md-4">
+                                    <p>Production</p>
+                                    <p>Designer</p>
+                                    <p>Body Style</p>
+                                    <p>Layout</p>
+                                    <p>Engine</p>
+                                </div>
+                                <div class="col-md-8">
+                                    <p>1999 - 2002</p>
+                                    <p> - </p>
+                                    <p>2-door coupé</p>
+                                    <p> Front-engine, rear-wheel-drive</p>
+                                    <p>2.0 L SR20DE I4 &
+                                        2.0 L SR20DET I4 turbo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div> -->
+
+
+
+
+    <section class="my-5">
+        <div class="d-flex justify-content-center">
+            <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
+                <li class="nav-item mx-4" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true">Folder</button>
+                </li>
+                <li class="nav-item mx-4" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false">Table</button>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="https://drive.google.com/drive/folders/1UQnl9DMA1aOgG7DXsqo8Z0QOqd5WyKFE?usp=sharing">
+                            <img src="asset/folder-png-image-5a39e27e8a0ec4.54314397151374297456554498-removebg-preview.png"
+                                width="100%">
+                            <h1 class="text-center">Kelompok 1</h1>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="https://drive.google.com/drive/folders/1Xo3KqladXsXgg2lwXuz5OgJb9ojEiZVJ?usp=sharing">
+                            <img src="asset/folder-png-image-5a39e27e8a0ec4.54314397151374297456554498-removebg-preview.png"
+                                width="100%">
+                            <h1 class="text-center">Kelompok 2</h1>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href=https://drive.google.com/drive/folders/19X-2ayOJZWfVAkpz-xgtCokRmHNOTYyz?usp=sharing">
+                            <img src="asset/folder-png-image-5a39e27e8a0ec4.54314397151374297456554498-removebg-preview.png"
+                                width="100%">
+                            <h1 class="text-center">Kelompok 3</h1>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="https://drive.google.com/drive/folders/1THuBaZdnuofzz3IrhmbheqesL2-wcSzt?usp=sharing">
+                            <img src="asset/folder-png-image-5a39e27e8a0ec4.54314397151374297456554498-removebg-preview.png"
+                                width="100%">
+                            <h1 class="text-center">Kelompok 4</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center tab-pane fade" id="pills-profile" role="tabpanel"
+                aria-labelledby="pills-profile-tab">
+                <div class="row">
+                    <div class="col-md-6">
+                        <table class="tg">
+                            <tbody>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">a</td>
+                                    <td class="tg-0pky text-center" onclick="myFunction()">b</td>
+                                    <td class="tg-0pky text-center">c</td>
+                                    <td class="tg-0pky text-center">d</td>
+                                    <td class="tg-0pky text-center">e</td>
+                                    <td class="tg-0pky text-center">f</td>
+                                    <td class="tg-0pky text-center">g</td>
+                                    <td class="tg-0pky text-center">h</td>
+                                    <td class="tg-0pky text-center">i</td>
+                                    <td class="tg-0pky text-center">j</td>
+                                    <td class="tg-0pky text-center">k</td>
+                                    <td class="tg-0pky text-center">l</td>
+                                    <td class="tg-0pky text-center">m</td>
+                                    <td class="tg-0pky text-center">n</td>
+                                    <td class="tg-0pky text-center">o</td>
+                                    <td class="tg-0pky text-center">p</td>
+                                    <td class="tg-0pky text-center">q</td>
+                                    <td class="tg-0pky text-center">r</td>
+                                    <td class="tg-0pky text-center">t</td>
+                                    <td class="tg-0pky text-center">u</td>
+                                    <td class="tg-0pky text-center">v</td>
+                                    <td class="tg-0pky text-center">w</td>
+                                    <td class="tg-0pky text-center">x</td>
+                                    <td class="tg-0pky text-center">y</td>
+                                    <td class="tg-0pky text-center">z</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Petunjuk</h3>
+                        <ol>
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec felis posuere, iaculis
+                                magna ac, porta purus. Fusce fermentum, orci eget imperdiet congue, massa quam molestie
+                                magna, at consequat turpis nibh non dui.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec felis posuere, iaculis
+                                magna ac, porta purus. Fusce fermentum, orci eget imperdiet congue, massa quam molestie
+                                magna, at consequat turpis nibh non dui.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec felis posuere, iaculis
+                                magna ac, porta purus. Fusce fermentum, orci eget imperdiet congue, massa quam molestie
+                                magna, at consequat turpis nibh non dui.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="mx-auto">
+                            <input class="my-3" type="text" id="name" name="name" required minlength="4" maxlength="8" size="10"> <br>
+                            <button class="btn btn-primary">submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
